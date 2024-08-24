@@ -27,6 +27,62 @@ public class Client {
     @Embedded
     Adresse adresse;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+
+    public Adresse getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(Adresse adresse) {
+        this.adresse = adresse;
+    }
+
+    public List<Savings> getSavings() {
+        return savings;
+    }
+
+    public void setSavings(List<Savings> savings) {
+        this.savings = savings;
+    }
+
+    public List<LifeInsurrance> getLifeInsurrances() {
+        return lifeInsurrances;
+    }
+
+    public void setLifeInsurrances(List<LifeInsurrance> lifeInsurrances) {
+        this.lifeInsurrances = lifeInsurrances;
+    }
+
     @ManyToMany
     @JoinTable(name = "client_savings", joinColumns = @JoinColumn(name = "client_id"), inverseJoinColumns = @JoinColumn(name = "savings_id"))
     private List<Savings> savings;

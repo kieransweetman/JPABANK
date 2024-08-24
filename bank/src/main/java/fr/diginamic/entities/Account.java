@@ -20,14 +20,4 @@ public class Account {
     private int id;
     private String number;
 
-    // @ManyToMany(targetEntity = fr.diginamic.entities.Client.class)
-    // private Set<Client> clients;
-
-    // @OneToMany
-    // private List<Operation> operations;
-
-    // @ManyToOne
-    // @JoinColumn(name = "BANK_ID")
-    // private Bank bank;
-
 }
